@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container " style="width:50%;margin:50px auto">
+<div class="text-center"><h3> Add new Comment</h3></div>
+   <form action="/project/<%=id%>/comment" method="post" id="usr1form">
+      <textarea name="text" form="usr1form" rows="5" cols="90"  placeholder="comment"></textarea>
+        <div class="form-group text-center" >
+<button class="btn btn-lg btn-primary" style="margin: 25px auto">submit</button>
+      </div>
+  
+   </form>
+   
+</div>
+</div>

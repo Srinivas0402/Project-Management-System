@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container " style="width:50%;margin:50px auto">
+<div class="text-center"> Edit Project:<h3> <%=project.title%></h3></div>
+   <form action="/project/<%=id%>/Edit?_method=PUT" method="post" id="usrform">
+      <div class="form-group">
+         <label for="Title"><b>Project Title</b></label>
+         <p><input type="text" class="form-control" name="project[title]" id="Title" placeholder="title" value="<%=project.title%>" ></p>
+      </div>
+      <div class="form-group">
+         <label for="Brief Description"><b>Brief Description</b></label>
+         <p><textarea name="project[briefdesc]" form="usrform" rows="2" cols="90" id="Brief Description" placeholder="max 200 characters" required="true" maxlength="200"  ><%=project.briefdesc%></textarea></p>
+      </div>
+       <div class="form-group">
+         <label for="student"><b>Students name</b>(separate by commas)</label>
+         <p><input type="text" class="form-control" name="project[student]" id="student" placeholder="student" required="true" value="<%=project.student%>" ></p>
+      </div>
+      <div class="form-group">
+         
+         <textarea name="project[compdesc]" form="usrform"rows="20" cols="90" id="cp" placeholder="complete description" required="true" ><%=project.compdesc%></textarea>
+      </div>
+
+        
+        <div class="form-group text-center" >
+          <button class="btn btn-lg btn-primary" style="margin: 25px auto">submit</button>
+</div>
+  
+   </form>
+   
+
+</div>

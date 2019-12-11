@@ -1,0 +1,48 @@
+<html>
+<head>
+   <title></title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+ 
+   <div class="container">
+    <div class="text-center justify-content-center"style="height: 50px;letter-spacing:1px;"><b><%=projects.title %></b></div>
+    <div style="height: 50px;letter-spacing:1px;"><i>mentor:    </i><b><%=projects.author.username %></b></div>
+   <div style="height: 50px;letter-spacing:1px;"><i>students:   </i><b><%=projects.student %></b></div>
+   <div  style="height: 50px;letter-spacing:1px;"><i><b>complete details about project: </b></i></div>
+    <div class="border border-dark" style="height: auto;letter-spacing:0.5px;"><p style="margin-left:8px;margin-right:8px;margin-top:12px;"><%=projects.compdesc %></p></div>
+ 
+<% if(projects.author.id.equals(req._id)){%>
+<div class="row"  >
+<div class="col col-md-4"style="padding-top:20px" >
+ <a class="btn btn-lg btn-primary" href="/project/<%=id%>/Edit">Edit</a></div><%}%>
+ <div class="col col-md-4"></div>
+ <div class="col col-md-4" style="padding-top:20px;">
+   <a class="btn btn-lg btn-primary"  href="/projects">Back</a>
+ </div>
+</div>
+</div>
+</div>
+<hr>
+<div class="container">
+<div class="well">
+    <h1>Comments</h1>
+    <% if(projects.author.id.equals(req._id) || pc.has(req.empid)){%>
+    <div style="padding-bottom: 10px;">
+       <a class="btn btn-md btn-primary" href="/project/<%=projects._id%>/comment/new"> add new comment</a>
+    </div>
+    <%}%>
+   <% projects.comments.forEach(function(comment){ %>
+    <div class="row border-dark">
+         <div class="col col-lg-12 border">
+           <p><b><%=comment.author.username%></b></p> 
+           <p border-dark><%= comment.text%></p>
+         </div>
+      </div>
+      <%})%>
+ </div>
+</div>
+
+
+
+

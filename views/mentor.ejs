@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+<div class="container">
+  <div class="jumbotron">
+<p> <b><h2>WELCOME TO MENTORING </h2></b> </p>
+<hr class="dark">
+<p> You can add new projects and check the existing</p>
+  </div>
+
+<div class="row" >
+<div class="col-md-6 col-sm-12 text-center justify-content-center" style="width: 25%;background:#d3d3d3;height:95px;">
+       <div> add a new project</div>
+       <p><a class="btn btn-primary btn-lg" href="/mentoring/projects/new">add</a></p>
+     </div>
+    
+     <div class="col-md-6 col-sm-12 text-center justify-content-center"style="width: 25%;background:#8B8D8E;height:95px">
+       <div> existing project</div>
+       <p><a class="btn btn-primary btn-lg" href="/mentoring/<%=req._id%>">view</a></p>
+     </div>
+  </div>
+  
+
+  <div class="container">
+  <p style="padding-top:100px;" ><a class="btn btn-md btn-primary" href="/projects">Back</a></p>
+  </div>
+</div>

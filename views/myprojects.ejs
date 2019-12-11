@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+
+<div class="container">
+   	 <div class="row text-center">
+
+   	 	<% project.forEach(function(p){ %>
+   	 		<div class="col-md-4 col-sm-6 border">
+   	 			<h3><%=p.title%></h3>
+   	 			<div><%=p.briefdesc%></div>
+   	 			<div><a class="btn btn-primary btn-sm" href="/project/<%=p._id%>">show more</a></div>
+   	 		</div>
+   	 	<% });%>
+	 </div>
+   	</div>
+   	
+</body>
+</html>  

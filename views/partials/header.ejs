@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+ 
+	<ul class="nav justify-content-left navbar-dark">
+  <li class="nav-item">
+    <a class="nav-link active btn btn-outline-success" href="/">project report</a>
+  </li>
+  <% if(!req){%>
+  
+
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-success" href="/register">register</a>
+  </li><%}else{%>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-success" href="/mentoring">Mentoring</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link btn btn-outline-success" href="/logout">logout</a>
+  </li>
+  <%}%>
+</ul>

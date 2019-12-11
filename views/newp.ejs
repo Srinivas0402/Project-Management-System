@@ -1,0 +1,35 @@
+<% include ./partials/header %>
+<div class="container " style="width:50%;margin:50px auto">
+<div class="text-center"><h3> Add new Project</h3></div>
+   <form action="/mentoring/projects" method="post" id="usrform">
+      <div class="form-group">
+         <label for="Title"><b>Project Title</b></label>
+         <p><input type="text" class="form-control" name="title" id="Title" placeholder="title" ></p>
+      </div>
+      <div class="form-group">
+         <label for="Brief Description"><b>Brief Description</b></label>
+         <p><textarea name="briefdesc" form="usrform"rows="2" cols="90" id="Brief Description" placeholder="max 200 characters" required="true" maxlength="200"></textarea></p>
+      </div>
+       <div class="form-group">
+         <label for="student"><b>Students name</b>(separate by commas)</label>
+         <p><input type="text" class="form-control" name="student" id="student" placeholder="student" required="true"></p>
+      </div>
+      <div class="form-group">
+         
+         <textarea name="compdesc" form="usrform"rows="20" cols="90" id="cp" placeholder="complete description" required="true"></textarea>
+      </div>
+
+        
+        <div class="form-group text-center" >
+<button class="btn btn-lg btn-primary" style="margin: 25px auto">submit</button>
+</div>
+<div class="container">
+<p> <a class="btn btn-success" href="/mentoring"> Back</a>
+</p>
+</div>
+  
+   </form>
+   
+
+</div>
+
