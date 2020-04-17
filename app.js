@@ -11,11 +11,11 @@ var express     = require("express"),
     comment		= require("./models/comment"),
     User		= require("./models/user");
 
-
+app.set('port',(process.env.PORT || 3000));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost/preport4");
+mongoose.connect("mongodb://localhost/projectss");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
@@ -264,6 +264,6 @@ project.find({},function(err,projects){
 
 
 
-app.listen(3000,function(req,res){
+app.listen(app.get('port'),function(req,res){
 console.log("server has just started");
 });

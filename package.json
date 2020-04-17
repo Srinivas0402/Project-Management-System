@@ -4,9 +4,10 @@
   "description": "dbms mini project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
   },
-  "author": "srinivas v, rashid",
+  "author": "srinivas v",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
